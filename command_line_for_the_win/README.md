@@ -7,7 +7,7 @@
 ### Steps followed
 
 * Completed the challenge on my Browser on a Windows computer
-* Logged in on my **`Intranet`** and copied the **`SFTP`** link
+* Loggedin on my **Intranet** and copied the **SFTP** link
 * Used ***SFTP*** command-line tool to establish a connection to the sandbox environment
 * Navigated to the alx-system_engineering-devops/command_line_for_the_win/ directory
-* Used the ***`put`*** command with the wild card ***` put *.png`*** and ***`put *.jpg`***
+* Used the ***put*** command with the wild card ***put *.png*** and ***put *.jpg***
