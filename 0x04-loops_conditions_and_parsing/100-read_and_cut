@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that displays the content of the file /etc/passwd
+# only display: username, user id, Home directory path for the use
+
+IFS=":"
+
+while read -r usrname id _ dir _
+do
+	echo "$usrname:$id:$dir"
+done < /etc/passwd
