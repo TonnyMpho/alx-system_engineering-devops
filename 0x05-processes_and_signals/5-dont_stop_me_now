@@ -2,4 +2,4 @@
 # Bash script that stops 4-to_infinity_and_beyond process
 # using kill
 
-pgrep '4-to_infinity_and_beyond' | xargs kill
+pgrep "4-to_infinity_and_beyond" | xargs kill
