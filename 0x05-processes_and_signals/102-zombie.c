@@ -30,7 +30,7 @@ int main(void)
 
 		if (zombie == 0)
 		{
-			printf("Zombie process created, PID: %d\n", getpid());
+			printf("Zombie process created, PID: %i\n", getpid());
 			exit(EXIT_SUCCESS);
 		}
 		else if (zombie < 0)
