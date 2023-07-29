@@ -7,7 +7,6 @@
 # Deletes the file /var/run/myscript.pid and terminates itself when
 # receiving a SIGQUIT or SIGTERM signal
 
-trap 'echo "I hate the kill command"' SIGTERM
 trap 'echo "Y U no love me?!"' SIGINT
 
 sigterm_sigquit()
