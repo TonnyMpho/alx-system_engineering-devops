@@ -13,6 +13,7 @@ trap 'echo "Y U no love me?!"' SIGINT
 sigterm_sigquit()
 {
 	rm /var/run/myscript.pid
+	echo "I hate the kill command"
 	exit
 }
 trap sigterm_sigquit SIGTERM SIGQUIT
