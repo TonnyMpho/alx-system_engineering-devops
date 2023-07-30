@@ -129,7 +129,7 @@ Read:
 ### 11. Zombie
 \#advanced
 
-Read [https://zombieprocess.wordpress.com/what-is-a-zombie-process/](what a zombie process is.)
+Read [what a zombie process is.](https://zombieprocess.wordpress.com/what-is-a-zombie-process/)
 
 #### C program that creates 5 zombie processes.
 
