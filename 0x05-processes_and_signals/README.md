@@ -1,8 +1,8 @@
 ## 0x05. Processes and signals
 
 ### Resources
-* Read or watch:
 
+##### Read or watch:
 - [Linux PID](http://www.linfo.org/pid.html)
 - [Linux process](https://www.thegeekstuff.com/2012/03/linux-processes-environment/)
 - [Linux signal](https://www.educative.io/answers/what-are-linux-signals)
