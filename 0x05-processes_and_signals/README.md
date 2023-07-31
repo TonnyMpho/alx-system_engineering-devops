@@ -3,10 +3,10 @@
 ### Resources
 * Read or watch:
 
-[Linux PID](http://www.linfo.org/pid.html)
-[Linux process](https://www.thegeekstuff.com/2012/03/linux-processes-environment/)
-[Linux signal](https://www.educative.io/answers/what-are-linux-signals)
-[(Process management in linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
+- [Linux PID](http://www.linfo.org/pid.html)
+- [Linux process](https://www.thegeekstuff.com/2012/03/linux-processes-environment/)
+- [Linux signal](https://www.educative.io/answers/what-are-linux-signals)
+- [Process management in linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
 
 ## Tasks
 
@@ -92,10 +92,10 @@
 
 Read:
 
-[&](https://bashitout.com/2013/05/18/Ampersands-on-the-command-line.html)
-[init.d](https://www.ghacks.net/2009/04/04/get-to-know-linux-the-etcinitd-directory/)
-[Daemon](https://en.wikipedia.org/wiki/Daemon_%28computing%29)
-[Positional parameters](https://www.gnu.org/software/bash/manual/html_node/Positional-Parameters.html)
+- [&](https://bashitout.com/2013/05/18/Ampersands-on-the-command-line.html)
+- [init.d](https://www.ghacks.net/2009/04/04/get-to-know-linux-the-etcinitd-directory/)
+- [Daemon](https://en.wikipedia.org/wiki/Daemon_%28computing%29)
+- [Positional parameters](https://www.gnu.org/software/bash/manual/html_node/Positional-Parameters.html)
 * man: sudo
 
 - Programs that are detached from the terminal and running in the background are called daemons or processes, need to be managed. The general minimum set of instructions is: start, restart and stop. The most popular way of doing so on Unix system is to use the init scripts.
