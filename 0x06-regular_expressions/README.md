@@ -20,7 +20,7 @@ puts ARGV[0].scan(/127.0.0.[0-9]/).join
 - [Use a regular expression against a problem: now you have 2 problems](https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/)
 - [Learn Regular Expressions with simple, interactive exercises](https://regexone.com/)
 
-###Tasks
+### Tasks
 
 ### 0. Simply matching School
 
@@ -31,10 +31,10 @@ puts ARGV[0].scan(/127.0.0.[0-9]/).join
 
 ### 1. Repetition Token #0
 
-hbttn
-hbtttn
-hbttttn
-hbtttttn
+- hbttn
+- hbtttn
+- hbttttn
+- hbtttttn
 
 ##### Requirements:
 
@@ -42,8 +42,8 @@ hbtttttn
 
 ### 2. Repetition Token #1
 
-htn
-hbtn
+- htn
+- hbtn
 
 ##### Requirements:
 
@@ -51,10 +51,10 @@ hbtn
 
 ### 3. Repetition Token #2
 
-hbtn
-hbttn
-hbtttn
-hbttttn
+- hbtn
+- hbttn
+- hbtttn
+- hbttttn
 
 ##### Requirements:
 
@@ -64,11 +64,11 @@ hbttttn
 
 ##### Requirements:
 
-hbn
-hbtn
-hbttn
-hbtttn
-hbttttn
+- hbn
+- hbtn
+- hbttn
+- hbtttn
+- hbttttn
 
 * Find the regular expression that will match the above cases
 * project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
