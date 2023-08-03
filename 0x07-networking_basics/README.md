@@ -34,13 +34,14 @@ It is organized from the lowest level to the highest level:
 
 Keep in mind that the OSI model is a concept, it’s not even tangible. The OSI model doesn’t perform any functions in the networking process. It is a conceptual framework so we can better understand complex interactions that are happening. Most of the functionality in the OSI model exists in all communications systems.
 
-
+![OSI model](https://www.bing.com/images/blob?bcid=ROO4kz0WEukFqxcxoNWLuD9SqbotqVTdP7w)
 
 In this project we will mainly focus on:
 
 * The Transport layer and especially TCP/UDP
 * On the Network layer with IP and ICMP
 
+![How the OSI layers work](https://www.bing.com/images/blob?bcid=qHO71n6bVekF5g)
 
 ##### Questions:
 
@@ -57,6 +58,8 @@ How is the OSI model organized?
 3. Randomly
 
 ### 1. Types of network
+
+![Types of Network](https://www.bing.com/images/blob?bcid=qLptmHFAMekFyA)
 
 LAN connect local devices together, WAN connects LANs together, and WANs are operating over the Internet.
 
@@ -82,7 +85,9 @@ What network do you use when you browse www.google.com from your smartphone (not
 
 ### 2. MAC and IP address
 
-#####Questions:
+![MAC address](https://www.bing.com/images/blob?bcid=RBL7qSHl1ekFqxcxoNWLuD9SqbotqVTdP6c)
+
+##### Questions:
 
 What is a MAC address?
 
@@ -133,7 +138,7 @@ Note that a specific [IP + port = socket.](https://stackoverflow.com/questions/1
 * That shows the PID and name of the program to which each socket belongs
 
 Example:
-`
+```
 sylvain@ubuntu$ sudo ./4-TCP_and_UDP_ports
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
@@ -160,7 +165,7 @@ unix  2      [ ACC ]     STREAM     LISTENING     6525     1/init              @
 unix  2      [ ACC ]     STREAM     LISTENING     8559     835/dbus-daemon     /var/run/dbus/system_bus_socket
 unix  2      [ ACC ]     STREAM     LISTENING     9190     1087/acpid          /var/run/acpid.socket
 unix  2      [ ACC ]     SEQPACKET  LISTENING     7156     378/systemd-udevd   /run/udev/control
-`
+```
 
 ### 5. Is the host on the network
 
