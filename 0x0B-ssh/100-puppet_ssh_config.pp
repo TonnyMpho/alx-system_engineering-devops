@@ -1,7 +1,8 @@
 # SSH configuration file so that can connect to a server without typing a password.
-file { '/etc/ssh/ssh_config':
+file { '/Home/ubuntu/.ssh/config':
   ensure  => 'file',
   content => "\
+Host ubuntu-xenial
   IdentifyFile ~/.ssh/school
   PasswordAuthentication no
 "
