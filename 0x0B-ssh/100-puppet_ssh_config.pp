@@ -1,7 +1,6 @@
 # SSH configuration file so that can connect to a server without typing a password.
-file { 'config':
-  ensure  => 'file',
-  path    => '/etc/ssh/ssh_config''
+file { '/etc/ssh/ssh_config':
+  ensure  => 'present',
   content => "\
 Host *
   IdentifyFile ~/.ssh/school
