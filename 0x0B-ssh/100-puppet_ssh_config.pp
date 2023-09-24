@@ -2,8 +2,8 @@
 file_line { 'disable Password Auth':
   ensure => present,
   line   => [
-    'passwordAuthentication no',
-    'IdentifyFile ~/.ssh/school',
+    '  passwordAuthentication no',
+    '  IdentifyFile ~/.ssh/school',
   ],
-  path   => '/etc/ssh/ssh_config'
+  path   => '/etc/ssh/ssh_config',
 }
