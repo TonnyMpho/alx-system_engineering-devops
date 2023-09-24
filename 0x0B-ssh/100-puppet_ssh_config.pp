@@ -1,5 +1,5 @@
 # SSH configuration file so that can connect to a server without typing a password.
-file { '/etc/ssh/ssh_config':
+file { '~/.ssh/config':
   ensure  => 'file',
   content => "\
 Host *
