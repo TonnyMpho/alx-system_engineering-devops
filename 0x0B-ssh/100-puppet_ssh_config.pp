@@ -5,5 +5,5 @@ file { '/etc/ssh/ssh_config':
 Host *
   IdentifyFile ~/.ssh/school
   PasswordAuthentication no
-",
+"
 }
