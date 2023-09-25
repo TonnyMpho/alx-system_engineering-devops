@@ -2,7 +2,7 @@
 file_line { 'disable Password Auth':
   ensure => present,
   path   => '/etc/ssh/ssh_config',
-  line   => '  PasswordAuthentication no'
+  line   => 'PasswordAuthentication no'
 }
 
 file_line { 'Identity file':
