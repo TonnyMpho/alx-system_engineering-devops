@@ -14,4 +14,8 @@ PATH_TO_SSH_KEY="$4"
 
 Options=" -o StrictHostKeyChecking=no"
 
-scp "$Options" -i "$PATH_TO_SSH_KEY" "$PATH_TO_FILE" "$USERNAME@$IP:~/"
+if [ -z "$PATH_TO_SSH_KEY" ]; then
+	scp "$Options" "$PATH_TO_FILE" "$USERNAME"@"$IP":~/
+else
+	scp "$Options" -i "$PATH_TO_SSH_KEY" "$PATH_TO_FILE" "$USERNAME"@"$IP":~
+fi
