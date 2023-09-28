@@ -1,1 +1,3 @@
-sudo systemctl start aparche2.service
+#!/usr/bin/env bash
+#start apache web server
+sudo systemctl start apache2.service
