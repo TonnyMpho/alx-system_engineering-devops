@@ -11,6 +11,6 @@ REDIRECTION="
     }
 "
 
-sudo sed -i "/location \/ {/a "$REDIRECTION"" /etc/nginx/sites-available/default
+sudo sed -i "/location \/ {/a $REDIRECTION" /etc/nginx/sites-available/default
 
 sudo service nginx restart
