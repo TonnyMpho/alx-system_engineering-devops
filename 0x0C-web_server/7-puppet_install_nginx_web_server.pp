@@ -11,14 +11,14 @@ file { '/var/www/html/index.html':
 
 file { '/etc/nginx/sites-available/default':
   ensure  => 'file',
-  content => 'server {
+  content => "server {
     listen 80;
     server_name _;
 
     location /redirect_me {
       return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
     }
-  }',
+  }",
   require => Package['nginx'],
 }
 
