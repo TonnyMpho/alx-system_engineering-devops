@@ -9,6 +9,12 @@ file { '/var/www/html/index.html':
   require => Package['nginx'],
 }
 
+nginx::resource::server { 'default':
+  listen_options => 'default_server',
+  server_name    => '_',
+  ensure         => present,
+}
+
 nginx::resource::location { 'redirect':
   location => '/redirect_me',
   server   => 'default',
