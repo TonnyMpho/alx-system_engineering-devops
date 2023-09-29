@@ -12,7 +12,7 @@ file { '/var/www/html/index.html':
 file { '/etc/nginx/sites-available/default':
   ensure  => 'file',
   content => "server {
-    listen 80;
+    listen 80 default_server;
     server_name _;
 
     location /redirect_me {
