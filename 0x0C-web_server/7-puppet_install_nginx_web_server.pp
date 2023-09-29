@@ -22,12 +22,6 @@ file { '/etc/nginx/sites-available/default':
   require => Package['nginx'],
 }
 
-file { '/etc/nginx/sites-enabled/default':
-  ensure  => 'link',
-  target  => '/etc/nginx/sites-available/default',
-  require => File['/etc/nginx/sites-available/default'],
-}
-
 # Ensure Nginx service is running and enabled
 service { 'nginx':
   ensure  => 'running',
