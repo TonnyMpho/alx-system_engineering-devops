@@ -9,17 +9,24 @@ file { '/var/www/html/index.html':
   require => Package['nginx'],
 }
 
-nginx::resource::server { 'default':
-  listen_options => 'default_server',
-  server_name    => '_',
-  ensure         => present,
+file { '/etc/nginx/sites-available/default':
+  ensure  => 'file',
+  content => "server {
+    listen 80 default_server;
+    server_name _;
+
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+}",
+  require => Package['nginx'],
 }
 
-nginx::resource::location { 'redirect':
-  location => '/redirect_me',
-  server   => 'default',
-  rewrite  => '^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent',
-}
 # Ensure Nginx service is running and enabled
 service { 'nginx':
   ensure  => 'running',
