@@ -15,13 +15,6 @@ file { '/etc/nginx/sites-available/default':
     listen 80;
     server_name _;
 
-    location / {
-      root   /var/www/html;
-      index  index.html;
-      add_header Content-Type text/html;
-      echo "Hello World!";
-    }
-
     location /redirect_me {
       return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
     }
