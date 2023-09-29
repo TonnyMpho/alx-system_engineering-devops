@@ -3,7 +3,7 @@ package { 'nginx':
   ensure => 'installed',
 }
 
-file { '/var/www/html/index.html:
+file { '/var/www/html/index.html':
   ensure  => file,
   content => 'Hello World!',
   require => Package['nginx'],
@@ -23,8 +23,8 @@ file { '/etc/nginx/sites-available/default':
 }
 
 file { '/etc/nginx/sites-enabled/default':
-  ensure => 'link',
-  target => '/etc/nginx/sites-available/default',
+  ensure  => 'link',
+  target  => '/etc/nginx/sites-available/default',
   require => File['/etc/nginx/sites-available/default'],
 }
 
