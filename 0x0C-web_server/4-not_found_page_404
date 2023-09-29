@@ -13,5 +13,7 @@ REDIRECTION="\\
 
 sudo sed -i "53s|.*|$REDIRECTION|" /etc/nginx/sites-enabled/default
 
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+
 sudo nginx -t
 sudo service nginx restart
