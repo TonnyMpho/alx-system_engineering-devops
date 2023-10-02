@@ -26,8 +26,8 @@ frontend main
     	default_backend web_servers
 
 backend we_servers
-	server web-01 100.26.178.116:80
-	server web-02 54.144.154.1:80
+	server 323649-web-01 100.26.178.116:80
+	server 323649-web-02 54.144.154.1:80
 	balance roundrobin
 EOF
 
