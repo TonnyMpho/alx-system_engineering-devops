@@ -3,6 +3,11 @@ package { 'nginx':
   ensure => 'installed',
 }
 
+file { '/var/www/html/index.html':
+  ensure  => 'file',
+  content => 'Hello World!',
+  require => Package['nginx'],
+}
 
 # Ensure Nginx service is running and enabled
 service { 'nginx':
@@ -21,6 +26,4 @@ file_line { 'add_header':
 
 exec { 'restart nginx':
   command     => '/usr/sbin/service nginx restart',
-  refreshonly => true
-  subscribe   => File_line['add_header'],
 }
