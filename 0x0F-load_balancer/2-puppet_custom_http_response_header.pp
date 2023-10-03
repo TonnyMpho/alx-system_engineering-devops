@@ -15,10 +15,10 @@ file_line { 'add_header':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   line    => "add_header X-Served-By ${hostname};",
-  after   => 'server_name',
+  after   => 'server_name _;',
   require => Service['nginx'],
 }
 
-exec { 'restsrt nginx':
-  command => '/usr/bin/service nginx restart',
+exec { 'restart nginx':
+  command => '/usr/sbin/service nginx restart',
 }
