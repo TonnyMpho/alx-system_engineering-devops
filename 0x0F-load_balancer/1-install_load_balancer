@@ -5,6 +5,10 @@ sudo apt-get update
 sudo apt-get install -y haproxy
 
 sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null << EOF
+frontend http-in
+    bind *:80
+    default_backend web_servers
+
 backend web_servers
         server 323649-web-01 100.26.178.116:80 check
         server 323649-web-02 54.144.154.1:80 check
@@ -13,4 +17,5 @@ EOF
 
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 
-sudo service haproxy restart
+sudo systemctl enable haproxy
+sudo systemctl start haproxy
