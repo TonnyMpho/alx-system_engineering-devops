@@ -3,23 +3,22 @@ package { 'nginx':
   ensure => 'installed',
 }
 
-file { '/var/www/html/index.html':
-  ensure  => file,
-  content => 'Hello World!',
-  require => Package['nginx'],
-}
-
-file_line { 'add_header':
-  ensure  => 'present',
-  path    => '/etc/nginx/sites-available/default',
-  line    => 'add_header X-Served-By ${hostname}',
-  after   => 'server_name',
-  require => Package['nginx'],
-}
 
 # Ensure Nginx service is running and enabled
 service { 'nginx':
   ensure  => 'running',
   enable  => true,
   require => Package['nginx'],
+}
+
+file_line { 'add_header':
+  ensure  => 'present',
+  path    => '/etc/nginx/sites-available/default',
+  line    => "add_header X-Served-By ${hostname};",
+  after   => 'server_name',
+  require => Service['nginx'],
+}
+
+exec { 'restsrt nginx':
+  command => '/usr/bin/service nginx restart',
 }
