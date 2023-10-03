@@ -20,5 +20,7 @@ file_line { 'add_header':
 }
 
 exec { 'restart nginx':
-  command => '/usr/sbin/service nginx restart',
+  command     => '/usr/sbin/service nginx restart',
+  refreshonly => true
+  subscribe   => File_line['add_header'],
 }
