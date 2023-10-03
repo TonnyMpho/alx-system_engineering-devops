@@ -9,23 +9,11 @@ file { '/var/www/html/index.html':
   require => Package['nginx'],
 }
 
-file { '/etc/nginx/sites-available/default':
-  ensure  => 'file',
-  content => "server {
-    listen 80 default_server;
-    server_name _;
-
-    add_header X-Served-By ${hostname};
-
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-    }
-
-    location / {
-        root /var/www/html;
-        index index.html;
-    }
-}",
+file_line { 'add_header':
+  ensure  => 'present',
+  path    => '/etc/nginx/sites-available/default',
+  line    => 'add_header X-Served-By ${hostname}',
+  after   => 'server_name',
   require => Package['nginx'],
 }
 
