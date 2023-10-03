@@ -4,11 +4,12 @@
 sudo apt-get update
 sudo apt-get install -y haproxy
 
-echo "
-backend we_servers
-	server 323649-web-01 100.26.178.116:80
-	server 323649-web-02 54.144.154.1:80
-	balance roundrobin" >> /etc/haproxy/haproxy.cfg
+sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null << EOF
+backend web_servers
+        server 323649-web-01 100.26.178.116:80 check
+        server 323649-web-02 54.144.154.1:80 check
+        balance roundrobin
+EOF
 
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 
