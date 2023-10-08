@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Bash script
+
+sudo sed -i 's/listen 8080;/listen 80;/g' /etc/nginx/sites-available/default
+service nginx reload
