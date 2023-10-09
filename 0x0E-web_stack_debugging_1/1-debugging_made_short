@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #Bash script
 
-sudo sed -i 's/listen 8080;/listen 80;/g' /etc/nginx/sites-available/default
-service nginx reload
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+pkill -SIGHUP nginx
