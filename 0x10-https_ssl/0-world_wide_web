@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#Bash script that will display information about subdomains.
+
+display_info() {
+
+	dns=$(dig +short "$1.$2")
+
+	record=$(echo "$dns" | awk '{if (NF == 1) print "A"; else print "CNAME"}')
+	dest=$(echo "$dns" | awk '{if (NF == 1) print $1; else print $NF}')
+
+	echo "The subdomain $1 is a $record record and points to $dest"
+}
+
+if [ -z "$2" ]
+then
+	subdomains=("www" "lb-01" "web-01" "web-02")
+else
+	subdomains=("$2")
+fi
+
+for subdomain in "${subdomains[@]}"
+do
+	display_info "$subdomain" "$1"
+done
