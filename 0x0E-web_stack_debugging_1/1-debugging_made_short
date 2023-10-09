@@ -2,4 +2,5 @@
 #Bash script
 
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-pkill -SIGHUP nginx
+service nginx restart
+pkill -o nginx
