@@ -8,15 +8,23 @@ from sys import argv
 
 
 if __name__ == "__main__":
+
+    if len(argv) != 2 or type(argv[1]) is not int:
+        exit(1)
+
     user_id = argv[1]
 
     url = "https://jsonplaceholder.typicode.com/"
-    employee = requests.get(url + "users/{}".format(user_id))
+    res = requests.get(url + "users/{}".format(user_id))
     todos = requests.get(url + "todos", params={"userId": user_id}).json()
 
-    emp_name = employee.json().get("name")
-    completed = []
+    if res.status_code != 200:
+        print("User not found")
+        exit(1)
 
+    emp_name = res.json().get("name")
+
+    completed = []
     for todo in todos:
         if todo.get("completed") is True:
             completed.append(todo)
