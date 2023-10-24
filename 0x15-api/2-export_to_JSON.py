@@ -30,7 +30,7 @@ if __name__ == "__main__":
         completed = todo.get("completed")
         data[user_id].append({
             "task": title,
-            "copleted": completed,
+            "completed": completed,
             "username": username
             })
 
