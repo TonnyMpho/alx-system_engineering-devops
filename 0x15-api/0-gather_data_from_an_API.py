@@ -9,7 +9,7 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    if len(argv) != 2 or type(argv[1]) is not int:
+    if len(argv) != 2:
         exit(1)
 
     user_id = argv[1]
