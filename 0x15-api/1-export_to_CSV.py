@@ -24,8 +24,12 @@ if __name__ == "__main__":
 
     username = res.json().get("username")
 
+    data = []
+    for todo in todos:
+        title = todo.get("title")
+        completed = todo.get("completed")
+        data.append([user_id, username, completed, title])
+
     with open("{}.csv".format(user_id), 'w') as csv_f:
-            writer = csv.writer(csv_f, quoting=csv.QUOTE_ALL)
-            for todo in todos:
-                writer.writerow(
-                        [user_id, username, todo.get("completed"), todo.get("title")])
+        writer = csv.writer(csv_f, quoting=csv.QUOTE_ALL)
+        writer.writerows(data)
