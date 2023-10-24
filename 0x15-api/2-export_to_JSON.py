@@ -31,7 +31,7 @@ if __name__ == "__main__":
         data[user_id].append({
             "task": title,
             "copleted": completed,
-            "username":username
+            "username": username
             })
 
     with open("{}.json".format(user_id), 'w') as json_f:
