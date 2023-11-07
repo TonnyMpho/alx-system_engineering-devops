@@ -13,9 +13,6 @@ def top_ten(subreddit):
     header = {"User-Agent": "Python/3 (requests)"}
     res = requests.get(url, headers=header)
 
-    if res.status_code == 302:
-        return None
-
     if res.status_code == 200:
         posts = []
         posts = res.json()["data"]["children"][:10]
@@ -23,4 +20,4 @@ def top_ten(subreddit):
         for post in posts:
             print(post["data"]["title"])
     else:
-        return None
+        print("None")
