@@ -20,8 +20,7 @@ def recurse(subreddit, hot_list=[], after=None):
         data = res.json()
         posts = data['data']['children']
 
-        for post in posts:
-            hot_list.append(post['data']['title'])
+        hot_list.extend(list(map(lambda post: post['data']['title'], posts)))
 
         after = data['data']['after']
 
