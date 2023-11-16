@@ -49,6 +49,14 @@ server {
                 proxy_pass http://localhost:5002/api;
         }
 
+	location / {
+		proxy_pass http://127.0.0.1:5003/2-hbnb;
+	}
+
+	location /static {
+		alias /home/ubuntu/AirBnB_clone_v4/web_dynamic/static;
+        }
+
         listen 80 default_server;
         listen [::]:80 default_server;
 
@@ -75,11 +83,11 @@ server {
 
         server_name _;
 
-        location / {
+        #location / {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
-                try_files $uri $uri/ =404;
-        }
+                #try_files $uri $uri/ =404;
+        #}
 
         # pass PHP scripts to FastCGI server
         #
