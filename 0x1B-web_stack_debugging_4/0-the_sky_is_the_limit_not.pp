@@ -1,7 +1,6 @@
 # increasing number of requests
-
 exec { 'replacing':
-  command => 'sed -i "s/15/1000/" /etc/default/nginx',
+  command => 'sed -i s/15/1000/ /etc/default/nginx',
   path    => ['/usr/bin', '/bin'],
 }
 
