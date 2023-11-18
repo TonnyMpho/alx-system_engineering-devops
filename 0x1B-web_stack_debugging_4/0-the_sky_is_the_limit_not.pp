@@ -5,7 +5,7 @@ exec { 'replacing':
 }
 
 exec { 'restart_nginx':
-  command     => '/usr/sbin/service nginx restart',
+  command     => 'service nginx restart',
   path        => '/usr/sbin',
   refreshonly => true,
 }
