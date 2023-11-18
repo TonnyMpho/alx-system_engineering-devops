@@ -6,6 +6,6 @@ exec { 'fix--for-nginx':
 }
 
 exec { 'restart_nginx':
-  command     => 'service nginx restart',
+  command     => '/usr/sbin/service nginx restart',
   refreshonly => true,
 }
