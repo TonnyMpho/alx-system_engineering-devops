@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Bash script to reload Gunicorn in a graceful way.
 
-ps aux | pgrep -f gunicorn | kill -HUP
+pkill -HUP -f "gunicorn.*master"
